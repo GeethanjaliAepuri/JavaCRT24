@@ -1,0 +1,117 @@
+Write a program to check whether the given number is an Armstrong number or not. Armstrong Number:abcd... = pow(a,n) + pow(b,n) + pow(c,n) + pow(d,n) + .... where n represents the number of digits
+
+Input Format
+
+Read a no
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Print "Yes" if armstrong no else print "No"
+
+Sample Input 0
+
+153
+Sample Output 0
+
+Yes
+Sample Input 1
+
+120
+Sample Output 1
+
+No
+Sample Input 2
+
+1253
+Sample Output 2
+
+No
+Sample Input 3
+
+1634
+Sample Output 3
+
+Yes
+Submissions: 168
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+um
+1
+import java.io.*;
+2
+import java.util.*;
+3
+​
+4
+public class Solution {
+5
+​
+6
+    public static void main(String[] args) {
+7
+        Scanner s=new Scanner(System.in);
+8
+        int n=s.nextInt();
+9
+        int temp=n;
+10
+        int sum=0;
+11
+        int no=(int)Math.log10(n)+1;
+12
+​
+13
+        while(n>0) {
+14
+            int r=n%10;
+15
+            n=n/10;
+16
+            sum+=Math.pow(r,no);
+17
+        }
+18
+​
+19
+        if(temp==sum){
+20
+            System.out.println("Yes");
+21
+        } else {
+22
+            System.out.println("No");
+23
+        }
+24
+​
+25
+    }
+26
+}
+27Testcase 0
+Testcase 1
+Testcase 2
+Testcase 3
+Congratulations, you passed the sample test case.
+
+Click the Submit Code button to run your code against all the test cases.
+
+Input (stdin)
+
+153
+Your Output (stdout)
+
+Yes
+Expected Output
+
+Yes
+​
