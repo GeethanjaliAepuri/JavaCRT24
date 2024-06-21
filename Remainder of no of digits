@@ -1,0 +1,86 @@
+The function/method count Digits return an integer representing the remainder when the given number is divided by the number of digits in it. The function/method count Digits accepts an argument-num,an integer representing the given number. The function/method countDigits compiles code successfully but fails to get the desirable result for some test cases due to logical errors. Your task is to fix the code so that it passes all the test cases.
+
+Input Format
+
+Read a number
+
+Constraints
+
+1<=n<10^7
+
+Output Format
+
+Print remainder of number by no of digits
+
+Sample Input 0
+
+785
+Sample Output 0
+
+2
+Explanation 0
+
+Count the digits: 785 --> No of digits=3 785%3=2
+
+Submissions: 193
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+import java.io.*;
+2
+import java.util.*;
+3
+​
+4
+public class Solution {
+5
+​
+6
+    public static void main(String[] args){
+7
+    
+8
+        Scanner s=new Scanner(System.in);
+9
+        int num=s.nextInt();
+10
+        System.out.println(countDigits(num));
+11
+    }
+12
+​
+13
+    public static int countDigits(int num) {
+14
+        int numDigits=String.valueOf(num).length();
+15
+        return num%numDigits;
+16
+    }
+17
+}
+18
+​
+19
+​
+Line: 14 Col: 22
+Run Code Submit CodeUpload Code as File 
+Test against custom input
+Testcase 0
+Congratulations, you passed the sample test case.
+
+Click the Submit Code button to run your code against all the test cases.
+
+Input (stdin)
+
+785
+Your Output (stdout)
+
+2
+Expected Output
+2
