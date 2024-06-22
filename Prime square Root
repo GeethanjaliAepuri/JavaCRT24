@@ -1,0 +1,96 @@
+Write a program to check whether the given number is prime or not, If number is prime, find the square root of the number else print given number is not a prime number.
+
+Input Format
+
+Read a number
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Print output
+
+Sample Input 0
+
+8
+Sample Output 0
+
+8 is not a prime no
+Sample Input 1
+
+7
+Sample Output 1
+
+2.65
+Submissions: 162
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+import java.io.*;
+2
+import java.util.*;
+3
+​
+4
+public class Solution {
+5
+​
+6
+    public static void main(String[] args) {
+7
+        Scanner s=new Scanner(System.in);
+8
+        int n=s.nextInt();
+9
+         int cnt=0;
+10
+         for(int i=1;i<=n;i++)
+11
+         {
+12
+             if(n%i==0)
+13
+                 cnt++;
+14
+          }
+15
+            if(cnt==2){
+16
+            System.out.printf("%.2f",Math.sqrt(n));
+17
+        } 
+18
+        else {
+19
+            System.out.println(n+" is not a prime no");
+20
+        }
+21
+    }
+22
+ }
+23
+​
+24
+Testcase 0
+Testcase 1
+Congratulations, you passed the sample test case.
+
+Click the Submit Code button to run your code against all the test cases.
+
+Input (stdin)
+
+8
+Your Output (stdout)
+
+8 is not a prime no
+Expected Output
+
+8 is not a prime no
