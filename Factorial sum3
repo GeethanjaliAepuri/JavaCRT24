@@ -1,0 +1,101 @@
+Write a program to find the sum of factorial of each digit in the given number.
+
+Input Format
+
+Read a number
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Print output
+
+Sample Input 0
+
+56
+Sample Output 0
+
+840
+Sample Input 1
+
+98427
+Sample Output 1
+
+408266
+Submissions: 109
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+import java.io.*;
+2
+import java.util.*;
+3
+​
+4
+public class Solution {
+5
+​
+6
+    public static void main(String[] args) {
+7
+      Scanner s=new Scanner(System.in);
+8
+        int n=s.nextInt();
+9
+​
+10
+        int sum = 0;
+11
+        while (n>0) {
+12
+            int digit =n %10;
+13
+            sum+=factorial(digit);
+14
+            n/=10;
+15
+        }
+16
+​
+17
+        System.out.println(sum);
+18
+    }
+19
+    public static int factorial(int digit) {
+20
+        int fact=1;
+21
+        for (int i=1; i<=digit; i++) {
+22
+            fact*=i;
+23
+        }
+24
+        return fact;
+25
+    }
+26
+}
+Testcase 0
+Testcase 1
+Congratulations, you passed the sample test case.
+
+Click the Submit Code button to run your code against all the test cases.
+
+Input (stdin)
+
+56
+Your Output (stdout)
+
+840
+Expected Output
+
+840
