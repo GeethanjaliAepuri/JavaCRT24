@@ -1,0 +1,95 @@
+The garments company Apparel wishes to open outlets at various locations. The company shortlisted several plots in these locations and wishes to select only plots that are square- shaped. Write an algorithm to help Apparel find the number of plots that it can select for its outlets.
+
+Input Format
+
+The first line of the input consists of an integer num0fMots, representing the number of plots shortlisted by the company for outlets (N). The second line consists of N space-separated integers – areal, areal, ….., areaN representing the area of the N plots selected for outlets.
+
+Constraints
+
+0 < num0fPlots < 10^6 0 < area < 10^6 0 < i < num0fPlots
+
+Output Format
+
+Print an integer representing the number of plots that will be selected for outlets.
+
+Sample Input 0
+
+8
+79 77 54 81 48 34 25 16
+Sample Output 0
+
+3
+Explanation 0
+
+The areas that are in square form are 81, 25 and 16. So, the output is 3.
+
+Sample Input 1
+
+6
+12 36 49 64 21 9
+Sample Output 1
+
+4
+
+ 
+1
+import java.io.*;
+2
+import java.util.*;
+3
+​
+4
+public class Solution {
+5
+​
+6
+    public static void main(String[] args) {
+7
+        Scanner s=new Scanner(System.in);
+8
+        int numOfPlots=s.nextInt();
+9
+        int squarePlotsCount=0;
+10
+​
+11
+        for (int i=0;i<numOfPlots;i++) {
+12
+            int area=s.nextInt();
+13
+            int sqrt=(int)Math.sqrt(area);
+14
+            if (sqrt*sqrt==area) {
+15
+                squarePlotsCount++;
+16
+            }
+17
+        }
+18
+​
+19
+        System.out.println(squarePlotsCount);
+20
+    }
+21
+}
+22
+​
+
+Testcase 0
+Testcase 1
+Congratulations, you passed the sample test case.
+
+Click the Submit Code button to run your code against all the test cases.
+
+Input (stdin)
+
+8
+79 77 54 81 48 34 25 16
+Your Output (stdout)
+
+3
+Expected Output
+
+3
