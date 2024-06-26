@@ -1,0 +1,119 @@
+In a science research lab, combining two nuclear chemicals produces a maximum energy that is the product of the energy of the two chemicals. The energy values of the chemicals can be negative or positive. The scientist wishes to calculate the sum of the maximized energies of the two elements when the reaction happens. Write an algorithm to find the total energy produced by the chemicals when the reaction happens.
+
+Input Format
+
+The first line of the input consists of an integer numOfChem, representing the number of chemicals (N). The second line consists of N space-separated integers – enerp ener2, , enerN representing the energies of the chemicals.
+
+Constraints
+
+0 < num0fChem <=10^6
+
+Output Format
+
+Print an integer representing the total energy produced by the chemicals when the reaction happens.
+
+Sample Input 0
+
+7
+9 -3 8 -6 -7 8 10
+Sample Output 0
+
+19
+Explanation 0
+
+Mixing of Highest and second highest chemicals
+
+Sample Input 1
+
+5
+23 11 44 22 18
+Sample Output 1
+
+67
+Submissions: 218
+Max Score: 0
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+import java.io.*;
+2
+import java.util.*;
+3
+​
+4
+public class Solution {
+5
+​
+6
+    public static void main(String[] args) {
+7
+        Scanner s=new Scanner(System.in);
+8
+        int n=s.nextInt();
+9
+        int[] a=new int[n];
+10
+​
+11
+        
+12
+        for (int i = 0; i < n; i++) {
+13
+            a[i]=s.nextInt();
+14
+        }
+15
+​
+16
+        for (int i=0;i<n-1;i++) {
+17
+            for (int j=i+1;j<n;j++) {
+18
+                if (a[i]>a[j]) {
+19
+                    int temp=a[i];
+20
+                    a[i]=a[j];
+21
+                    a[j]=temp;
+22
+                }
+23
+            }
+24
+        }
+25
+​
+26
+     
+27
+        System.out.println(a[n-1]+a[n-2]);
+28
+    }
+29
+}
+30
+​
+Line: 16 Col: 19
+Run Code Submit CodeUpload Code as File 
+Test against custom input
+Testcase 0
+Testcase 1
+Congratulations, you passed the sample test case.
+
+Click the Submit Code button to run your code against all the test cases.
+
+Input (stdin)
+
+7
+9 -3 8 -6 -7 8 10
+Your Output (stdout)
+
+19
+Expected Output
+
+19
