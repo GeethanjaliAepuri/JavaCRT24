@@ -1,0 +1,33 @@
+import java.util.*;
+class Test6
+{
+public static void main(String args[])
+{
+Scanner s=new Scanner(System.in);
+int n=s.nextInt();
+int a[]=new int[n];
+for(int i=0;i<n;i++)
+{
+a[i]=s.nextInt();
+}
+int j=0;
+for(int i=0;i<n-1;i++)
+{
+if(a[i]!=a[i+1])
+a[j++]=a[i];
+}
+a[j++]=a[n-1];
+for(int i=0;i<j;i++)
+{
+System.out.print(a[i]+" ");
+}
+}
+}
+
+C:\javacrt1>javac Test6.java
+
+C:\javacrt1>java Test6
+5
+2 3 5 1 6
+2 3 5 1 6
+C:\javacrt1>
