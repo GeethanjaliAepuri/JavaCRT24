@@ -1,0 +1,28 @@
+import java.util.HashMap; 
+import java.util.Map; 
+public class IterateHashMap { 
+    public static void main(String[] args) { 
+        HashMap<Integer, String> map = new HashMap<>(); 
+        map.put(1, "Apple"); 
+        map.put(2, "Banana"); 
+        map.put(3, "Cherry"); 
+        // Iterating through keys 
+        System.out.print("Keys: "); 
+        for (Integer key : map.keySet()) { 
+            System.out.print(key + " "); 
+        } 
+        System.out.println(); 
+        // Iterating through values 
+        System.out.print("Values: "); 
+        for (String value : map.values()){
+            System.out.print(value + " "); 
+        } 
+        System.out.println(); 
+        // Iterating through key-value pairs 
+        System.out.println("Key-Value pairs:"); 
+        for (Map.Entry<Integer, String> entry : map.entrySet()) { 
+            System.out.println(entry.getKey() + " => " + entry.getValue()); 
+        } 
+    } 
+} 
+
